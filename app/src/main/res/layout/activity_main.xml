@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_text"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edittext"
+            android:textSize="@dimen/dimen_25sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/convert_id"
+        android:layout_width="@dimen/dimen_200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_text"
+        android:text="@string/convert_to"
+        android:textSize="@dimen/dimen_30sp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="@dimen/dimen_20dp"/>
+    
+    <RadioGroup
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@id/dollars"
+        app:layout_constraintStart_toStartOf="@id/convert_id"
+        app:layout_constraintTop_toBottomOf="@id/convert_id">
+
+        <RadioButton
+            android:id="@+id/dollars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/dollars"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/dimen_23sp"
+           />
+
+        <RadioButton
+            android:id="@+id/pounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pounds"
+            android:textSize="@dimen/dimen_23sp"/>
+
+        <RadioButton
+            android:id="@+id/euros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/euro"
+            android:textSize="@dimen/dimen_23sp"
+            />
+        <RadioButton
+            android:id="@+id/bitcoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitcoin"
+            android:textSize="@dimen/dimen_23sp"
+            />
+    </RadioGroup>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D500F9"
+        android:checked="true"
+        android:text="@string/round_up"
+        android:textSize="@dimen/dimen_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_button"
+     />
+
+    <Button
+        android:id="@+id/convert_currency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#651FFF"
+        android:text="@string/convert"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_btn" />
+
+    <TextView
+        android:id="@+id/converted_amount"
+        android:layout_width="@dimen/dimen_150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_currency"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/dimen_25sp"
+        tools:text="@string/amount"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

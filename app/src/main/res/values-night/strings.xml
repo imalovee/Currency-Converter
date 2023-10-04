@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bitcoin">Bitcoin</string>
+    <string name="euro">Euro</string>
+    <string name="pounds">Pounds</string>
+    <string name="dollars">Dollars</string>
+    <string name="convert_to">convert to?</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="round_up">Round up</string>
+    <string name="amount">=Amount: %1$s</string>
+    <string name="convert">convert</string>
+
+</resources>
